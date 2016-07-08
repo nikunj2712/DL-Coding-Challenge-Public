@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  iWeather
+//
+//  Created by Nikunj on 7/8/16.
+//  Copyright © 2016 Nikunj. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#define KSERVER_WEATHERUNDERGROUND_URL @"http://evolihost.com/wtc3/"
+#define KSERVER_GOOGLE_URL @"https://maps.googleapis.com/maps/api/place/autocomplete/json?types=%28cities%29&language=en_US&key=AIzaSyDUaRZI5a4bf2ugW0VSt9G3fiM-PNf6YFY"
+#define KSERVER_GOOGLEURL_LAT_LONG @"https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDUaRZI5a4bf2ugW0VSt9G3fiM-PNf6YFY"
+
+#define KAPPDELEGATE (AppDelegate *)[[UIApplication sharedApplication] delegate]
+
+#endif /* PrefixHeader_pch */
+#endif

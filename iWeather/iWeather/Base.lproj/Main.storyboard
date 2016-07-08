@@ -126,30 +126,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="scl-nl-vla">
-                                <rect key="frame" x="89" y="28" width="511" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="DOc-FP-kCD"/>
-                                    <constraint firstAttribute="width" priority="250" constant="511" id="OnJ-74-Tqt"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WjS-rb-pZl" userLabel="Table View Searched Cities">
-                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Po8-WU-DEC" userLabel="Table View Cell cities">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Po8-WU-DEC" id="OTE-ee-8Pc">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sB4-iT-6wX">
-                                <rect key="frame" x="20" y="35" width="60" height="30"/>
+                                <rect key="frame" x="20" y="34" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="n9i-8B-K6A"/>
                                     <constraint firstAttribute="width" constant="60" id="peS-Vy-5l4"/>
@@ -159,22 +137,70 @@
                                     <action selector="buttonCancelPressed:" destination="2Ie-Pe-xAt" eventType="touchUpInside" id="1X2-iH-RNu"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search City by name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ML-rQ-6nM">
+                                <rect key="frame" x="192" y="34" width="216" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="6a4-YG-AXS"/>
+                                    <constraint firstAttribute="height" constant="30" id="pty-H2-lTH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEditingBegan:" destination="2Ie-Pe-xAt" eventType="editingChanged" id="ifG-2u-faB"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WjS-rb-pZl" userLabel="Table View Searched Cities">
+                                <rect key="frame" x="0.0" y="74" width="600" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Po8-WU-DEC" userLabel="Table View Cell cities">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Po8-WU-DEC" id="OTE-ee-8Pc">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbb-Bt-kbh">
+                                                    <rect key="frame" x="8" y="11" width="573" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Py3-zd-w2l"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="leadingMargin" secondItem="Cbb-Bt-kbh" secondAttribute="leading" id="DcN-23-7Gp"/>
+                                                <constraint firstItem="Cbb-Bt-kbh" firstAttribute="centerY" secondItem="OTE-ee-8Pc" secondAttribute="centerY" id="n5y-1C-3ry"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Cbb-Bt-kbh" secondAttribute="trailing" constant="11" id="qsK-vv-ILU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2Ie-Pe-xAt" id="vuI-zr-KuT"/>
+                                    <outlet property="delegate" destination="2Ie-Pe-xAt" id="NlR-Ch-78e"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sB4-iT-6wX" firstAttribute="centerY" secondItem="scl-nl-vla" secondAttribute="centerY" id="1u7-VJ-njv"/>
-                            <constraint firstItem="scl-nl-vla" firstAttribute="leading" secondItem="sB4-iT-6wX" secondAttribute="trailing" constant="9" id="3p9-Vt-Yte"/>
                             <constraint firstAttribute="leadingMargin" secondItem="sB4-iT-6wX" secondAttribute="leading" id="5pD-dW-eFP"/>
-                            <constraint firstItem="scl-nl-vla" firstAttribute="top" secondItem="g4I-lk-1Kl" secondAttribute="bottom" constant="8" id="8wc-7R-6IN"/>
+                            <constraint firstItem="sB4-iT-6wX" firstAttribute="centerY" secondItem="8ML-rQ-6nM" secondAttribute="centerY" id="8ZY-VZ-2OM"/>
                             <constraint firstItem="MUt-Vx-9Wn" firstAttribute="top" secondItem="WjS-rb-pZl" secondAttribute="bottom" id="Ds0-z4-pDE"/>
-                            <constraint firstAttribute="trailing" secondItem="scl-nl-vla" secondAttribute="trailing" id="Ea5-Db-xYw"/>
-                            <constraint firstItem="WjS-rb-pZl" firstAttribute="top" secondItem="scl-nl-vla" secondAttribute="bottom" id="I4R-fC-vnx"/>
+                            <constraint firstItem="8ML-rQ-6nM" firstAttribute="centerX" secondItem="z7I-a2-1c4" secondAttribute="centerX" id="GFs-8g-qva"/>
                             <constraint firstItem="WjS-rb-pZl" firstAttribute="width" secondItem="z7I-a2-1c4" secondAttribute="width" id="Z7s-mp-UjY"/>
-                            <constraint firstItem="scl-nl-vla" firstAttribute="centerX" secondItem="z7I-a2-1c4" secondAttribute="centerX" constant="44.5" id="aer-8b-GuR"/>
+                            <constraint firstItem="8ML-rQ-6nM" firstAttribute="top" secondItem="g4I-lk-1Kl" secondAttribute="bottom" constant="14" id="a5p-ol-g1b"/>
                             <constraint firstItem="WjS-rb-pZl" firstAttribute="centerX" secondItem="z7I-a2-1c4" secondAttribute="centerX" id="lmJ-fb-gV8"/>
+                            <constraint firstItem="WjS-rb-pZl" firstAttribute="top" secondItem="8ML-rQ-6nM" secondAttribute="bottom" constant="10" id="msj-cs-H1K"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dP0-oj-neR"/>
+                    <connections>
+                        <outlet property="tableViewCities" destination="WjS-rb-pZl" id="Krl-rJ-ahA"/>
+                        <outlet property="textfieldCity" destination="8ML-rQ-6nM" id="8qz-SU-Zy9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOq-Ym-Zf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

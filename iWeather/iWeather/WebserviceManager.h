@@ -15,4 +15,7 @@
 
 +(WebserviceManager *)sharedWebservices;
 
++(void)fetchCitiesFromURL:(NSString *)urlString withResponse:(void(^)(NSArray *arrayCities))responseReceived;
++(void)fetchLatitudeLongitudeFromCityFullName:(NSString *)strCityFullName withResponse:(void(^)(NSString *strTZId))responseData;
+
 @end

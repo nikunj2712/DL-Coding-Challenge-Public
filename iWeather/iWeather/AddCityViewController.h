@@ -14,4 +14,11 @@
 @interface AddCityViewController : UIViewController
 @property(nonatomic,weak)HomeViewController *vcHome;
 - (IBAction)buttonCancelPressed:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *textfieldCity;
+- (IBAction)textFieldEditingBegan:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *tableViewCities;
+
+
 @end
