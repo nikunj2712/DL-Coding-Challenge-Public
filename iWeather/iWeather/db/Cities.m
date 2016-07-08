@@ -7,6 +7,7 @@
 //
 
 #import "Cities.h"
+#import "CurrentConditions.h"
 #import "Forecasts.h"
 #import "HourlyForecasts.h"
 

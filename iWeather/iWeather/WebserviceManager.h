@@ -6,10 +6,13 @@
 //  Copyright © 2016 Nikunj. All rights reserved.
 //
 
+
+//This singleton class handles all web service related calls.
+
 #import <Foundation/Foundation.h>
 
 @interface WebserviceManager : NSObject
 
-+(WebserviceManager *)sharedCoreData;
++(WebserviceManager *)sharedWebservices;
 
 @end

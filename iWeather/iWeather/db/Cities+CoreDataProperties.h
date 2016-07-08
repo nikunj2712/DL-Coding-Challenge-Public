@@ -15,13 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Cities (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *placeid;
 @property (nullable, nonatomic, retain) NSString *cityname;
-@property (nullable, nonatomic, retain) NSString *state;
 @property (nullable, nonatomic, retain) NSString *counntryiso;
 @property (nullable, nonatomic, retain) NSNumber *ishome;
 @property (nullable, nonatomic, retain) NSString *latitude;
 @property (nullable, nonatomic, retain) NSString *longitde;
+@property (nullable, nonatomic, retain) NSString *placeid;
+@property (nullable, nonatomic, retain) NSString *state;
 @property (nullable, nonatomic, retain) NSString *timezone;
 @property (nullable, nonatomic, retain) CurrentConditions *hasCondition;
 @property (nullable, nonatomic, retain) NSSet<Forecasts *> *hasForecast;

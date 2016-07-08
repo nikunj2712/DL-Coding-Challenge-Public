@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+//This VC show hourly forecast details in the collection view. This VC is embeded inside a container view.
+
 @interface HourlyViewController : UIViewController
 
 @end

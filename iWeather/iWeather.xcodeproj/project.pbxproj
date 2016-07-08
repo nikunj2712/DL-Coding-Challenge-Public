@@ -20,16 +20,17 @@
 		EC009DC01D2F415F0008F7C9 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DBF1D2F415E0008F7C9 /* SideMenuViewController.m */; };
 		EC009DC31D2F43370008F7C9 /* AddCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DC21D2F43370008F7C9 /* AddCityViewController.m */; };
 		EC009DC61D2F4CCC0008F7C9 /* HourlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DC51D2F4CCC0008F7C9 /* HourlyViewController.m */; };
-		EC009DD71D2F63EF0008F7C9 /* Forecasts+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DC81D2F63EF0008F7C9 /* Forecasts+CoreDataProperties.m */; };
-		EC009DD81D2F63EF0008F7C9 /* Forecasts.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DCA1D2F63EF0008F7C9 /* Forecasts.m */; };
-		EC009DD91D2F63EF0008F7C9 /* HourlyForecasts+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DCC1D2F63EF0008F7C9 /* HourlyForecasts+CoreDataProperties.m */; };
-		EC009DDA1D2F63EF0008F7C9 /* HourlyForecasts.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DCE1D2F63EF0008F7C9 /* HourlyForecasts.m */; };
-		EC009DDB1D2F63EF0008F7C9 /* Cities+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DD01D2F63EF0008F7C9 /* Cities+CoreDataProperties.m */; };
-		EC009DDC1D2F63EF0008F7C9 /* Cities.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DD21D2F63EF0008F7C9 /* Cities.m */; };
-		EC009DDD1D2F63EF0008F7C9 /* CurrentConditions+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DD41D2F63EF0008F7C9 /* CurrentConditions+CoreDataProperties.m */; };
-		EC009DDE1D2F63EF0008F7C9 /* CurrentConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DD61D2F63EF0008F7C9 /* CurrentConditions.m */; };
 		EC009DE21D2F66F30008F7C9 /* CoredataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DE11D2F66F20008F7C9 /* CoredataManager.m */; };
 		EC009DE51D2F670F0008F7C9 /* WebserviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DE41D2F670F0008F7C9 /* WebserviceManager.m */; };
+		EC0959FA1D2FDEE200EC5894 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0959F91D2FDEE200EC5894 /* MasterViewController.m */; };
+		EC095A4A1D2FE38100EC5894 /* CurrentConditions+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A3B1D2FE38100EC5894 /* CurrentConditions+CoreDataProperties.m */; };
+		EC095A4B1D2FE38100EC5894 /* CurrentConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A3D1D2FE38100EC5894 /* CurrentConditions.m */; };
+		EC095A4C1D2FE38100EC5894 /* HourlyForecasts+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A3F1D2FE38100EC5894 /* HourlyForecasts+CoreDataProperties.m */; };
+		EC095A4D1D2FE38100EC5894 /* HourlyForecasts.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A411D2FE38100EC5894 /* HourlyForecasts.m */; };
+		EC095A4E1D2FE38100EC5894 /* Forecasts+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A431D2FE38100EC5894 /* Forecasts+CoreDataProperties.m */; };
+		EC095A4F1D2FE38100EC5894 /* Forecasts.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A451D2FE38100EC5894 /* Forecasts.m */; };
+		EC095A501D2FE38100EC5894 /* Cities+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A471D2FE38100EC5894 /* Cities+CoreDataProperties.m */; };
+		EC095A511D2FE38100EC5894 /* Cities.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A491D2FE38100EC5894 /* Cities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,26 +69,28 @@
 		EC009DC21D2F43370008F7C9 /* AddCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCityViewController.m; sourceTree = "<group>"; };
 		EC009DC41D2F4CCC0008F7C9 /* HourlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourlyViewController.h; sourceTree = "<group>"; };
 		EC009DC51D2F4CCC0008F7C9 /* HourlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourlyViewController.m; sourceTree = "<group>"; };
-		EC009DC71D2F63EF0008F7C9 /* Forecasts+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Forecasts+CoreDataProperties.h"; path = "db/Forecasts+CoreDataProperties.h"; sourceTree = "<group>"; };
-		EC009DC81D2F63EF0008F7C9 /* Forecasts+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Forecasts+CoreDataProperties.m"; path = "db/Forecasts+CoreDataProperties.m"; sourceTree = "<group>"; };
-		EC009DC91D2F63EF0008F7C9 /* Forecasts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Forecasts.h; path = db/Forecasts.h; sourceTree = "<group>"; };
-		EC009DCA1D2F63EF0008F7C9 /* Forecasts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Forecasts.m; path = db/Forecasts.m; sourceTree = "<group>"; };
-		EC009DCB1D2F63EF0008F7C9 /* HourlyForecasts+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "HourlyForecasts+CoreDataProperties.h"; path = "db/HourlyForecasts+CoreDataProperties.h"; sourceTree = "<group>"; };
-		EC009DCC1D2F63EF0008F7C9 /* HourlyForecasts+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "HourlyForecasts+CoreDataProperties.m"; path = "db/HourlyForecasts+CoreDataProperties.m"; sourceTree = "<group>"; };
-		EC009DCD1D2F63EF0008F7C9 /* HourlyForecasts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HourlyForecasts.h; path = db/HourlyForecasts.h; sourceTree = "<group>"; };
-		EC009DCE1D2F63EF0008F7C9 /* HourlyForecasts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HourlyForecasts.m; path = db/HourlyForecasts.m; sourceTree = "<group>"; };
-		EC009DCF1D2F63EF0008F7C9 /* Cities+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Cities+CoreDataProperties.h"; path = "db/Cities+CoreDataProperties.h"; sourceTree = "<group>"; };
-		EC009DD01D2F63EF0008F7C9 /* Cities+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Cities+CoreDataProperties.m"; path = "db/Cities+CoreDataProperties.m"; sourceTree = "<group>"; };
-		EC009DD11D2F63EF0008F7C9 /* Cities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cities.h; path = db/Cities.h; sourceTree = "<group>"; };
-		EC009DD21D2F63EF0008F7C9 /* Cities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cities.m; path = db/Cities.m; sourceTree = "<group>"; };
-		EC009DD31D2F63EF0008F7C9 /* CurrentConditions+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CurrentConditions+CoreDataProperties.h"; path = "db/CurrentConditions+CoreDataProperties.h"; sourceTree = "<group>"; };
-		EC009DD41D2F63EF0008F7C9 /* CurrentConditions+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CurrentConditions+CoreDataProperties.m"; path = "db/CurrentConditions+CoreDataProperties.m"; sourceTree = "<group>"; };
-		EC009DD51D2F63EF0008F7C9 /* CurrentConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentConditions.h; path = db/CurrentConditions.h; sourceTree = "<group>"; };
-		EC009DD61D2F63EF0008F7C9 /* CurrentConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentConditions.m; path = db/CurrentConditions.m; sourceTree = "<group>"; };
 		EC009DE01D2F66F20008F7C9 /* CoredataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoredataManager.h; sourceTree = "<group>"; };
 		EC009DE11D2F66F20008F7C9 /* CoredataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoredataManager.m; sourceTree = "<group>"; };
 		EC009DE31D2F670F0008F7C9 /* WebserviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceManager.h; sourceTree = "<group>"; };
 		EC009DE41D2F670F0008F7C9 /* WebserviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebserviceManager.m; sourceTree = "<group>"; };
+		EC0959F81D2FDEE200EC5894 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		EC0959F91D2FDEE200EC5894 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		EC095A3A1D2FE38100EC5894 /* CurrentConditions+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CurrentConditions+CoreDataProperties.h"; path = "db/CurrentConditions+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EC095A3B1D2FE38100EC5894 /* CurrentConditions+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CurrentConditions+CoreDataProperties.m"; path = "db/CurrentConditions+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EC095A3C1D2FE38100EC5894 /* CurrentConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentConditions.h; path = db/CurrentConditions.h; sourceTree = "<group>"; };
+		EC095A3D1D2FE38100EC5894 /* CurrentConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentConditions.m; path = db/CurrentConditions.m; sourceTree = "<group>"; };
+		EC095A3E1D2FE38100EC5894 /* HourlyForecasts+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "HourlyForecasts+CoreDataProperties.h"; path = "db/HourlyForecasts+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EC095A3F1D2FE38100EC5894 /* HourlyForecasts+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "HourlyForecasts+CoreDataProperties.m"; path = "db/HourlyForecasts+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EC095A401D2FE38100EC5894 /* HourlyForecasts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HourlyForecasts.h; path = db/HourlyForecasts.h; sourceTree = "<group>"; };
+		EC095A411D2FE38100EC5894 /* HourlyForecasts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HourlyForecasts.m; path = db/HourlyForecasts.m; sourceTree = "<group>"; };
+		EC095A421D2FE38100EC5894 /* Forecasts+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Forecasts+CoreDataProperties.h"; path = "db/Forecasts+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EC095A431D2FE38100EC5894 /* Forecasts+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Forecasts+CoreDataProperties.m"; path = "db/Forecasts+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EC095A441D2FE38100EC5894 /* Forecasts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Forecasts.h; path = db/Forecasts.h; sourceTree = "<group>"; };
+		EC095A451D2FE38100EC5894 /* Forecasts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Forecasts.m; path = db/Forecasts.m; sourceTree = "<group>"; };
+		EC095A461D2FE38100EC5894 /* Cities+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Cities+CoreDataProperties.h"; path = "db/Cities+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EC095A471D2FE38100EC5894 /* Cities+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Cities+CoreDataProperties.m"; path = "db/Cities+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EC095A481D2FE38100EC5894 /* Cities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cities.h; path = db/Cities.h; sourceTree = "<group>"; };
+		EC095A491D2FE38100EC5894 /* Cities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cities.m; path = db/Cities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 				EC009DC51D2F4CCC0008F7C9 /* HourlyViewController.m */,
 				EC009DBB1D2F411F0008F7C9 /* DetailViewController.h */,
 				EC009DBC1D2F411F0008F7C9 /* DetailViewController.m */,
+				EC0959F81D2FDEE200EC5894 /* MasterViewController.h */,
+				EC0959F91D2FDEE200EC5894 /* MasterViewController.m */,
 				EC009DBE1D2F415E0008F7C9 /* SideMenuViewController.h */,
 				EC009DBF1D2F415E0008F7C9 /* SideMenuViewController.m */,
 				EC009DE01D2F66F20008F7C9 /* CoredataManager.h */,
@@ -170,7 +175,6 @@
 				EC009DA21D2F21BE0008F7C9 /* Assets.xcassets */,
 				EC009DA41D2F21BE0008F7C9 /* LaunchScreen.storyboard */,
 				EC009DA71D2F21BE0008F7C9 /* Info.plist */,
-				EC009D9F1D2F21BE0008F7C9 /* iWeather.xcdatamodeld */,
 				EC009D931D2F21BE0008F7C9 /* Supporting Files */,
 			);
 			path = iWeather;
@@ -196,22 +200,23 @@
 		EC009DDF1D2F644B0008F7C9 /* db */ = {
 			isa = PBXGroup;
 			children = (
-				EC009DC71D2F63EF0008F7C9 /* Forecasts+CoreDataProperties.h */,
-				EC009DC81D2F63EF0008F7C9 /* Forecasts+CoreDataProperties.m */,
-				EC009DC91D2F63EF0008F7C9 /* Forecasts.h */,
-				EC009DCA1D2F63EF0008F7C9 /* Forecasts.m */,
-				EC009DCB1D2F63EF0008F7C9 /* HourlyForecasts+CoreDataProperties.h */,
-				EC009DCC1D2F63EF0008F7C9 /* HourlyForecasts+CoreDataProperties.m */,
-				EC009DCD1D2F63EF0008F7C9 /* HourlyForecasts.h */,
-				EC009DCE1D2F63EF0008F7C9 /* HourlyForecasts.m */,
-				EC009DCF1D2F63EF0008F7C9 /* Cities+CoreDataProperties.h */,
-				EC009DD01D2F63EF0008F7C9 /* Cities+CoreDataProperties.m */,
-				EC009DD11D2F63EF0008F7C9 /* Cities.h */,
-				EC009DD21D2F63EF0008F7C9 /* Cities.m */,
-				EC009DD31D2F63EF0008F7C9 /* CurrentConditions+CoreDataProperties.h */,
-				EC009DD41D2F63EF0008F7C9 /* CurrentConditions+CoreDataProperties.m */,
-				EC009DD51D2F63EF0008F7C9 /* CurrentConditions.h */,
-				EC009DD61D2F63EF0008F7C9 /* CurrentConditions.m */,
+				EC009D9F1D2F21BE0008F7C9 /* iWeather.xcdatamodeld */,
+				EC095A3A1D2FE38100EC5894 /* CurrentConditions+CoreDataProperties.h */,
+				EC095A3B1D2FE38100EC5894 /* CurrentConditions+CoreDataProperties.m */,
+				EC095A3C1D2FE38100EC5894 /* CurrentConditions.h */,
+				EC095A3D1D2FE38100EC5894 /* CurrentConditions.m */,
+				EC095A3E1D2FE38100EC5894 /* HourlyForecasts+CoreDataProperties.h */,
+				EC095A3F1D2FE38100EC5894 /* HourlyForecasts+CoreDataProperties.m */,
+				EC095A401D2FE38100EC5894 /* HourlyForecasts.h */,
+				EC095A411D2FE38100EC5894 /* HourlyForecasts.m */,
+				EC095A421D2FE38100EC5894 /* Forecasts+CoreDataProperties.h */,
+				EC095A431D2FE38100EC5894 /* Forecasts+CoreDataProperties.m */,
+				EC095A441D2FE38100EC5894 /* Forecasts.h */,
+				EC095A451D2FE38100EC5894 /* Forecasts.m */,
+				EC095A461D2FE38100EC5894 /* Cities+CoreDataProperties.h */,
+				EC095A471D2FE38100EC5894 /* Cities+CoreDataProperties.m */,
+				EC095A481D2FE38100EC5894 /* Cities.h */,
+				EC095A491D2FE38100EC5894 /* Cities.m */,
 			);
 			name = db;
 			sourceTree = "<group>";
@@ -368,23 +373,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC009DDB1D2F63EF0008F7C9 /* Cities+CoreDataProperties.m in Sources */,
 				EC009DC01D2F415F0008F7C9 /* SideMenuViewController.m in Sources */,
+				EC095A4C1D2FE38100EC5894 /* HourlyForecasts+CoreDataProperties.m in Sources */,
+				EC095A511D2FE38100EC5894 /* Cities.m in Sources */,
+				EC095A501D2FE38100EC5894 /* Cities+CoreDataProperties.m in Sources */,
 				EC009DE51D2F670F0008F7C9 /* WebserviceManager.m in Sources */,
-				EC009DDC1D2F63EF0008F7C9 /* Cities.m in Sources */,
-				EC009DD71D2F63EF0008F7C9 /* Forecasts+CoreDataProperties.m in Sources */,
-				EC009DD81D2F63EF0008F7C9 /* Forecasts.m in Sources */,
-				EC009DD91D2F63EF0008F7C9 /* HourlyForecasts+CoreDataProperties.m in Sources */,
 				EC009DBD1D2F411F0008F7C9 /* DetailViewController.m in Sources */,
 				EC009D9B1D2F21BE0008F7C9 /* HomeViewController.m in Sources */,
 				EC009DC61D2F4CCC0008F7C9 /* HourlyViewController.m in Sources */,
+				EC095A4D1D2FE38100EC5894 /* HourlyForecasts.m in Sources */,
+				EC095A4B1D2FE38100EC5894 /* CurrentConditions.m in Sources */,
+				EC095A4F1D2FE38100EC5894 /* Forecasts.m in Sources */,
+				EC095A4A1D2FE38100EC5894 /* CurrentConditions+CoreDataProperties.m in Sources */,
 				EC009DC31D2F43370008F7C9 /* AddCityViewController.m in Sources */,
 				EC009D981D2F21BE0008F7C9 /* AppDelegate.m in Sources */,
-				EC009DDE1D2F63EF0008F7C9 /* CurrentConditions.m in Sources */,
-				EC009DDA1D2F63EF0008F7C9 /* HourlyForecasts.m in Sources */,
+				EC0959FA1D2FDEE200EC5894 /* MasterViewController.m in Sources */,
 				EC009DA11D2F21BE0008F7C9 /* iWeather.xcdatamodeld in Sources */,
 				EC009D951D2F21BE0008F7C9 /* main.m in Sources */,
-				EC009DDD1D2F63EF0008F7C9 /* CurrentConditions+CoreDataProperties.m in Sources */,
+				EC095A4E1D2FE38100EC5894 /* Forecasts+CoreDataProperties.m in Sources */,
 				EC009DE21D2F66F30008F7C9 /* CoredataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

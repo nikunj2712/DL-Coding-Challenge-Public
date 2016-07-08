@@ -10,4 +10,7 @@
 
 @implementation AddCityViewController
 
+- (IBAction)buttonCancelPressed:(id)sender {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 @end

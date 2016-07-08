@@ -13,17 +13,17 @@
 
 @implementation CurrentConditions (CoreDataProperties)
 
-@dynamic tempin_f;
-@dynamic sunrise;
-@dynamic sunset;
-@dynamic windspeed;
-@dynamic winddirection;
-@dynamic feelslike;
-@dynamic pressure_in;
-@dynamic humidity_percent;
-@dynamic visibility_mile;
 @dynamic condition;
 @dynamic condition_icon_url;
+@dynamic feelslike;
+@dynamic humidity_percent;
+@dynamic pressure_in;
+@dynamic sunrise;
+@dynamic sunset;
+@dynamic tempin_f;
+@dynamic visibility_mile;
+@dynamic winddirection;
+@dynamic windspeed;
 @dynamic conditionBelongsToCity;
 
 @end

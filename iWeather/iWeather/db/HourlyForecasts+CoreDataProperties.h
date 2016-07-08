@@ -15,12 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HourlyForecasts (CoreDataProperties)
 
+@property (nullable, nonatomic, retain) NSString *condition;
+@property (nullable, nonatomic, retain) NSString *condition_icon;
+@property (nullable, nonatomic, retain) NSNumber *humidity_percent;
 @property (nullable, nonatomic, retain) NSNumber *order;
 @property (nullable, nonatomic, retain) NSNumber *temp_f;
-@property (nullable, nonatomic, retain) NSNumber *humidity_percent;
-@property (nullable, nonatomic, retain) NSString *condition_icon;
 @property (nullable, nonatomic, retain) NSString *time;
-@property (nullable, nonatomic, retain) NSString *condition;
 @property (nullable, nonatomic, retain) Cities *hourlyforecastBelongsToCity;
 
 @end

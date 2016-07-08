@@ -13,13 +13,13 @@
 
 @implementation Forecasts (CoreDataProperties)
 
-@dynamic order;
-@dynamic date;
+@dynamic condition;
 @dynamic condition_icon;
+@dynamic date;
+@dynamic humidity_percent;
 @dynamic max;
 @dynamic min;
-@dynamic humidity_percent;
-@dynamic condition;
+@dynamic order;
 @dynamic forecastBelongsToCity;
 
 @end

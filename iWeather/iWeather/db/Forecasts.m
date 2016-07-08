@@ -7,6 +7,7 @@
 //
 
 #import "Forecasts.h"
+#import "Cities.h"
 
 @implementation Forecasts
 

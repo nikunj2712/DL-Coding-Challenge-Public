@@ -13,13 +13,13 @@
 
 @implementation Cities (CoreDataProperties)
 
-@dynamic placeid;
 @dynamic cityname;
-@dynamic state;
 @dynamic counntryiso;
 @dynamic ishome;
 @dynamic latitude;
 @dynamic longitde;
+@dynamic placeid;
+@dynamic state;
 @dynamic timezone;
 @dynamic hasCondition;
 @dynamic hasForecast;

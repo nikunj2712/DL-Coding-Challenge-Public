@@ -13,12 +13,12 @@
 
 @implementation HourlyForecasts (CoreDataProperties)
 
+@dynamic condition;
+@dynamic condition_icon;
+@dynamic humidity_percent;
 @dynamic order;
 @dynamic temp_f;
-@dynamic humidity_percent;
-@dynamic condition_icon;
 @dynamic time;
-@dynamic condition;
 @dynamic hourlyforecastBelongsToCity;
 
 @end

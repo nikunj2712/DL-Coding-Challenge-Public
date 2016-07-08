@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Forecasts, HourlyForecasts;
+@class CurrentConditions, Forecasts, HourlyForecasts;
 
 NS_ASSUME_NONNULL_BEGIN
 

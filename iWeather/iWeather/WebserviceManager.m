@@ -10,7 +10,7 @@
 
 @implementation WebserviceManager
 
-+(WebserviceManager *)sharedCoreData{
++(WebserviceManager *)sharedWebservices{
     static dispatch_once_t oncePred=0;
     static WebserviceManager *_sharedObj = nil;
     dispatch_once(&oncePred, ^{
