@@ -182,10 +182,9 @@
     
 //    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response,NSError *error) {
-
     
         if (data) {
-            dataJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            dataJSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
             NSLog(@"Error: %@\ndataJSON = %@",error,[dataJSON description]);
             if(!dataJSON){
                 responseData(nil);
