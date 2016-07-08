@@ -28,6 +28,8 @@
 		EC009DDC1D2F63EF0008F7C9 /* Cities.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DD21D2F63EF0008F7C9 /* Cities.m */; };
 		EC009DDD1D2F63EF0008F7C9 /* CurrentConditions+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DD41D2F63EF0008F7C9 /* CurrentConditions+CoreDataProperties.m */; };
 		EC009DDE1D2F63EF0008F7C9 /* CurrentConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DD61D2F63EF0008F7C9 /* CurrentConditions.m */; };
+		EC009DE21D2F66F30008F7C9 /* CoredataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DE11D2F66F20008F7C9 /* CoredataManager.m */; };
+		EC009DE51D2F670F0008F7C9 /* WebserviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DE41D2F670F0008F7C9 /* WebserviceManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,10 @@
 		EC009DD41D2F63EF0008F7C9 /* CurrentConditions+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CurrentConditions+CoreDataProperties.m"; path = "db/CurrentConditions+CoreDataProperties.m"; sourceTree = "<group>"; };
 		EC009DD51D2F63EF0008F7C9 /* CurrentConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentConditions.h; path = db/CurrentConditions.h; sourceTree = "<group>"; };
 		EC009DD61D2F63EF0008F7C9 /* CurrentConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentConditions.m; path = db/CurrentConditions.m; sourceTree = "<group>"; };
+		EC009DE01D2F66F20008F7C9 /* CoredataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoredataManager.h; sourceTree = "<group>"; };
+		EC009DE11D2F66F20008F7C9 /* CoredataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoredataManager.m; sourceTree = "<group>"; };
+		EC009DE31D2F670F0008F7C9 /* WebserviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceManager.h; sourceTree = "<group>"; };
+		EC009DE41D2F670F0008F7C9 /* WebserviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebserviceManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,10 @@
 				EC009DBC1D2F411F0008F7C9 /* DetailViewController.m */,
 				EC009DBE1D2F415E0008F7C9 /* SideMenuViewController.h */,
 				EC009DBF1D2F415E0008F7C9 /* SideMenuViewController.m */,
+				EC009DE01D2F66F20008F7C9 /* CoredataManager.h */,
+				EC009DE11D2F66F20008F7C9 /* CoredataManager.m */,
+				EC009DE31D2F670F0008F7C9 /* WebserviceManager.h */,
+				EC009DE41D2F670F0008F7C9 /* WebserviceManager.m */,
 				EC009D9C1D2F21BE0008F7C9 /* Main.storyboard */,
 				EC009DA21D2F21BE0008F7C9 /* Assets.xcassets */,
 				EC009DA41D2F21BE0008F7C9 /* LaunchScreen.storyboard */,
@@ -360,6 +370,7 @@
 			files = (
 				EC009DDB1D2F63EF0008F7C9 /* Cities+CoreDataProperties.m in Sources */,
 				EC009DC01D2F415F0008F7C9 /* SideMenuViewController.m in Sources */,
+				EC009DE51D2F670F0008F7C9 /* WebserviceManager.m in Sources */,
 				EC009DDC1D2F63EF0008F7C9 /* Cities.m in Sources */,
 				EC009DD71D2F63EF0008F7C9 /* Forecasts+CoreDataProperties.m in Sources */,
 				EC009DD81D2F63EF0008F7C9 /* Forecasts.m in Sources */,
@@ -374,6 +385,7 @@
 				EC009DA11D2F21BE0008F7C9 /* iWeather.xcdatamodeld in Sources */,
 				EC009D951D2F21BE0008F7C9 /* main.m in Sources */,
 				EC009DDD1D2F63EF0008F7C9 /* CurrentConditions+CoreDataProperties.m in Sources */,
+				EC009DE21D2F66F30008F7C9 /* CoredataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
