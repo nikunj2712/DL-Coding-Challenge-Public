@@ -129,6 +129,9 @@
 //
             NSString *strLat = [dictLocation objectForKey:@"lat"];
             NSString *strLng = [dictLocation objectForKey:@"lng"];
+          
+            objCity.strLatitude = strLat;
+            objCity.strLongitude = strLng;
             
             NSString *strCoordinate = [NSString stringWithFormat:@"%@,%@",strLat,strLng];
             strCoordinate =  [strCoordinate stringByReplacingOccurrencesOfString:@" "  withString:@""];

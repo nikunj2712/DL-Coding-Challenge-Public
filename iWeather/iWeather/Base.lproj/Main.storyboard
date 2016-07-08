@@ -371,25 +371,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IJJ-Z5-sAq" userLabel="View Main">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJJ-Z5-sAq" userLabel="View Main">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v44-fX-wgM">
-                                        <rect key="frame" x="277" y="210" width="46" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="46" id="fNb-NI-rjE"/>
-                                            <constraint firstAttribute="height" constant="30" id="iBg-i5-J6q"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3pT-Yi-UjB" userLabel="Table View My Cities">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <action selector="buttonPressed:" destination="iQP-sf-9vC" eventType="touchUpInside" id="1Io-Yf-gKf"/>
+                                            <outlet property="dataSource" destination="iQP-sf-9vC" id="RDc-vq-gGj"/>
+                                            <outlet property="delegate" destination="iQP-sf-9vC" id="qpF-3d-G0g"/>
                                         </connections>
-                                    </button>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="v44-fX-wgM" firstAttribute="centerX" secondItem="IJJ-Z5-sAq" secondAttribute="centerX" id="NeH-2H-ama"/>
-                                    <constraint firstItem="v44-fX-wgM" firstAttribute="centerY" secondItem="IJJ-Z5-sAq" secondAttribute="centerY" id="nXK-8P-iOa"/>
+                                    <constraint firstItem="3pT-Yi-UjB" firstAttribute="width" secondItem="IJJ-Z5-sAq" secondAttribute="width" id="U7p-My-Mf9"/>
+                                    <constraint firstItem="3pT-Yi-UjB" firstAttribute="centerX" secondItem="IJJ-Z5-sAq" secondAttribute="centerX" id="aFx-tX-SYt"/>
+                                    <constraint firstItem="3pT-Yi-UjB" firstAttribute="centerY" secondItem="IJJ-Z5-sAq" secondAttribute="centerY" id="wm1-Da-3Fx"/>
+                                    <constraint firstItem="3pT-Yi-UjB" firstAttribute="height" secondItem="IJJ-Z5-sAq" secondAttribute="height" id="zl7-I6-3O5"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -404,6 +403,7 @@
                     <navigationItem key="navigationItem" id="7UA-3l-Ugi"/>
                     <connections>
                         <outlet property="constViewMainYpos" destination="zut-Dm-H2w" id="48w-TO-5Ws"/>
+                        <outlet property="tableViewCities" destination="3pT-Yi-UjB" id="fYT-cD-x72"/>
                         <outlet property="viewMain" destination="IJJ-Z5-sAq" id="DWJ-4i-fY7"/>
                         <segue destination="dke-yi-MdG" kind="push" identifier="toDetailVC" id="twB-yI-hCT"/>
                     </connections>

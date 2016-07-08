@@ -8,10 +8,14 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "CoredataManager.h"
+#import "CityTableViewCell.h"
+#import "Cities.h"
 
-@interface MasterViewController() <HomeViewControllerDelegate>
+@interface MasterViewController() <HomeViewControllerDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     DetailViewController *vcDetail;
+    __block NSArray *arrayCities;
 }
 @end
 
@@ -22,6 +26,16 @@
     self.viewMain.layer.cornerRadius = 20.0;
     self.viewMain.layer.masksToBounds = YES;
     self.vcHome.delegateHomeVC = self;
+    
+    UINib *nibCell = [UINib nibWithNibName:@"CellCities" bundle:nil];
+    [self.tableViewCities registerNib:nibCell forCellReuseIdentifier:@"cell"];
+    
+    [CoredataManager fetchAllCitiesFromLocal:^(NSArray *arraySavedCities) {
+        arrayCities = [NSArray arrayWithArray:arraySavedCities];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableViewCities reloadData];
+        });
+    }];
 }
 
 
@@ -41,6 +55,19 @@
         [self.viewMain layoutIfNeeded]; // 3
     } completion:^(BOOL finished) {
     }];
+}
+
+#pragma mark Table View delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return arrayCities.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    CityTableViewCell *cell = [self.tableViewCities dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    Cities *managedObjCity = arrayCities[indexPath.row];
+    cell.labelCityName.text = managedObjCity.cityname;
+    return cell;
 }
 
 - (IBAction)buttonPressed:(id)sender {

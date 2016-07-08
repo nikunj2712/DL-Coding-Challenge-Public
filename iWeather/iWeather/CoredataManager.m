@@ -106,9 +106,11 @@
     
     NSArray *arrayRes = [managedObjContext executeFetchRequest:fetchReqCity error:&error];
     
-    for (Cities *managedObjCity in arrayRes) {
-        NSLog(@"City: %@",managedObjCity.cityname);
-    }
+    responseData(arrayRes);
+    
+//    for (Cities *managedObjCity in arrayRes) {
+//        NSLog(@"City: %@",managedObjCity.cityname);
+//    }
 }
 
 
