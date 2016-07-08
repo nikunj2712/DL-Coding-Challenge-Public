@@ -1,4 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
+    <entity name="Cities" representedClassName="Cities" syncable="YES">
+        <attribute name="cityname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="counntryiso" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ishome" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitde" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timezone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasCondition" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CurrentConditions" inverseName="conditionBelongsToCity" inverseEntity="CurrentConditions" syncable="YES"/>
+        <relationship name="hasForecast" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Forecasts" inverseName="forecastBelongsToCity" inverseEntity="Forecasts" syncable="YES"/>
+        <relationship name="hasHourlyForecast" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HourlyForecasts" inverseName="hourlyforecastBelongsToCity" inverseEntity="HourlyForecasts" syncable="YES"/>
+    </entity>
+    <entity name="CurrentConditions" representedClassName="CurrentConditions" syncable="YES">
+        <attribute name="condition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="condition_icon_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feelslike" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="humidity_percent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="pressure_in" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="sunrise" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sunset" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tempin_f" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="visibility_mile" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="winddirection" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="windspeed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="conditionBelongsToCity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cities" inverseName="hasCondition" inverseEntity="Cities" syncable="YES"/>
+    </entity>
+    <entity name="Forecasts" representedClassName="Forecasts" syncable="YES">
+        <attribute name="condition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="condition_icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="humidity_percent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="max" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="min" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="forecastBelongsToCity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cities" inverseName="hasForecast" inverseEntity="Cities" syncable="YES"/>
+    </entity>
+    <entity name="HourlyForecasts" representedClassName="HourlyForecasts" syncable="YES">
+        <attribute name="condition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="condition_icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="humidity_percent" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="temp_f" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hourlyforecastBelongsToCity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cities" inverseName="hasHourlyForecast" inverseEntity="Cities" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Cities" positionX="-209" positionY="-189" width="128" height="208"/>
+        <element name="CurrentConditions" positionX="-128" positionY="54" width="128" height="223"/>
+        <element name="Forecasts" positionX="-297" positionY="113" width="128" height="163"/>
+        <element name="HourlyForecasts" positionX="-396" positionY="-81" width="128" height="148"/>
+    </elements>
 </model>

@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  DetailViewController.m
 //  iWeather
 //
 //  Created by Nikunj on 7/7/16.
 //  Copyright © 2016 Nikunj. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DetailViewController.h"
 
-@interface ViewController : UIViewController
-
+@implementation DetailViewController
 
 @end
-
