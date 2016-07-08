@@ -9,9 +9,14 @@
 //This singleton class handles all core data stuff for storing data persistently
 
 #import <Foundation/Foundation.h>
+#import "NewCitiesModel.h"
 
 @interface CoredataManager : NSObject
 
 +(CoredataManager *)sharedCoreData;
+
++(void)insertNewCity:(NewCitiesModel *)objCity withCompletion:(void(^)(BOOL isSaved))completion;
+
++(void)fetchAllCitiesFromLocal:(void(^)(NSArray *arraySavedCities))responseData;
 
 @end

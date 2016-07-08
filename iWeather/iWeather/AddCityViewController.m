@@ -9,11 +9,14 @@
 #import "AddCityViewController.h"
 #import "WebserviceManager.h"
 #import "NewCitiesModel.h"
+#import "MBProgressHUD.h"
 
 
 
 @interface AddCityViewController() <UITableViewDataSource,UITableViewDelegate>{
    __block NSArray *arrayNewCities;
+   __block MBProgressHUD *hud;
+    
 }
 
 @end
@@ -53,6 +56,28 @@
     NewCitiesModel *objCity = arrayNewCities[indexPath.row];
     labelCityName.text = objCity.strFullCityName;
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.label.text = NSLocalizedString(@"Fetching...", @"");
+    
+    NewCitiesModel *objCity = arrayNewCities[indexPath.row];
+    
+    [WebserviceManager saveCityUsingCityFullName:objCity withCompletion:^(BOOL status) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hud hideAnimated:YES];
+            if (status) {
+                //success
+            }else{
+                //error todo
+            }
+        });
+    }];
+    
+    //Add city to db after fetching lat, long and weather details
 }
 
 

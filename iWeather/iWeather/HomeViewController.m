@@ -10,6 +10,7 @@
 #import "HomeViewController.h"
 #import "MasterViewController.h"
 #import "AddCityViewController.h"
+#import "CoredataManager.h"
 
 
 @interface HomeViewController ()
@@ -30,6 +31,12 @@
     self.containerMain.layer.masksToBounds = YES;
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [CoredataManager fetchAllCitiesFromLocal:^(NSArray *arraySavedCities) {
+        
+    }];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

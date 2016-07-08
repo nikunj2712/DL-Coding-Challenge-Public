@@ -16,11 +16,20 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-#define KSERVER_WEATHERUNDERGROUND_URL @"http://evolihost.com/wtc3/"
+#define KSERVER_WEATHERUNDERGROUND_URL @"http://api.wunderground.com/api/4f3543638f253338/"
+
+//4f3543638f253338
+//7e69620b499796e2
 #define KSERVER_GOOGLE_URL @"https://maps.googleapis.com/maps/api/place/autocomplete/json?types=%28cities%29&language=en_US&key=AIzaSyDUaRZI5a4bf2ugW0VSt9G3fiM-PNf6YFY"
 #define KSERVER_GOOGLEURL_LAT_LONG @"https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDUaRZI5a4bf2ugW0VSt9G3fiM-PNf6YFY"
 
 #define KAPPDELEGATE (AppDelegate *)[[UIApplication sharedApplication] delegate]
+
+
+#define KEntity_Cities @"Cities"
+#define KEntity_Forecasts @"Forecasts"
+#define KEntity_HourlyForecast @"HourlyForecasts"
+#define KEntity_Conditions @"CurrentConditions"
 
 #endif /* PrefixHeader_pch */
 #endif

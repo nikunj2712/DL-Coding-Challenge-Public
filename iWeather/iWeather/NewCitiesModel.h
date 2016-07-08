@@ -14,4 +14,7 @@
 @property(strong,nonatomic)NSString *strPlaceID;
 @property(strong,nonatomic)NSString *strCountry;
 @property(strong,nonatomic)NSString *strState;
+@property(strong,nonatomic)NSString *strLatitude;
+@property(strong,nonatomic)NSString *strLongitude;
+@property(strong,nonatomic)NSString *strTimeZoneName;
 @end
