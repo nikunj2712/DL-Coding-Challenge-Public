@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ListCityDetailsModel.h"
 
 @interface DetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *labelCityName;
+@property (weak, nonatomic) IBOutlet UILabel *labelCondition;
+@property (nonatomic,strong) ListCityDetailsModel *selectedCity;
+@property (weak, nonatomic) IBOutlet UITableView *tableViewDayFoarecast;
 
 @end

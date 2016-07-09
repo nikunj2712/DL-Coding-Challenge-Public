@@ -16,6 +16,8 @@
 {
     DetailViewController *vcDetail;
     __block NSArray *arrayCities;
+    ListCityDetailsModel *selectedCity;
+    
 }
 @end
 
@@ -45,6 +47,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"toDetailVC"]) {
         vcDetail = segue.destinationViewController;
+        vcDetail.selectedCity = selectedCity;
     }
 }
 
@@ -97,6 +100,10 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    ListCityDetailsModel *modelCity = arrayCities[indexPath.row];
+    selectedCity = modelCity;
+
     self.vcHome.isBackEnabled = YES;
     [self.viewMain setNeedsUpdateConstraints];
     [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:1 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -105,8 +112,8 @@
     } completion:^(BOOL finished) {
         
         //push Detail VC
-        
         dispatch_async(dispatch_get_main_queue(), ^{
+
             [self performSegueWithIdentifier:@"toDetailVC" sender:self];
         });
     }];

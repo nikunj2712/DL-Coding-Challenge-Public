@@ -11,5 +11,6 @@
 //This VC show hourly forecast details in the collection view. This VC is embeded inside a container view.
 
 @interface HourlyViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionViewMain;
 
 @end
