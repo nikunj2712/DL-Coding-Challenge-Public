@@ -10,13 +10,20 @@
 
 #import <Foundation/Foundation.h>
 #import "NewCitiesModel.h"
+#import "Cities+CoreDataProperties.h"
+#import "HourlyForecasts+CoreDataProperties.h"
+#import "Forecasts+CoreDataProperties.h"
+#import "CurrentConditions+CoreDataProperties.h"
+#import "ConditionsModel.h"
 
 @interface CoredataManager : NSObject
 
 +(CoredataManager *)sharedCoreData;
 
-+(void)insertNewCity:(NewCitiesModel *)objCity withCompletion:(void(^)(BOOL isSaved))completion;
++(void)insertNewCity:(NewCitiesModel *)objCity withCompletion:(void(^)(BOOL isSaved, Cities *managedObjCity))completion;
 
 +(void)fetchAllCitiesFromLocal:(void(^)(NSArray *arraySavedCities))responseData;
+
++(void)insertCurrentConditionsForCity:(Cities *)managedObjCity andData:(ConditionsModel *)modelConditions withCompletion:(void(^)(BOOL isSaved))completion;
 
 @end

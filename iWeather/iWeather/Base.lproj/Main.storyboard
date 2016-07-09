@@ -61,7 +61,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="vHL-do-pMK" firstAttribute="top" secondItem="djC-qj-WQu" secondAttribute="top" constant="150" id="2LO-44-Ea8"/>
                                     <constraint firstItem="sgr-Rp-v1R" firstAttribute="top" secondItem="djC-qj-WQu" secondAttribute="top" constant="30" id="32Q-2I-uC1"/>
@@ -75,7 +75,7 @@
                                     <constraint firstAttribute="bottom" secondItem="J5z-2x-gK7" secondAttribute="bottom" constant="8" id="uf4-ao-Lhm"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="caE-QQ-jSI" userLabel="Container View side Menu">
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caE-QQ-jSI" userLabel="Container View side Menu">
                                 <rect key="frame" x="-240" y="0.0" width="240" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="45d-q9-KU2"/>
@@ -149,18 +149,18 @@
                                     <action selector="textFieldEditingBegan:" destination="2Ie-Pe-xAt" eventType="editingChanged" id="ifG-2u-faB"/>
                                 </connections>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WjS-rb-pZl" userLabel="Table View Searched Cities">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WjS-rb-pZl" userLabel="Table View Searched Cities">
                                 <rect key="frame" x="0.0" y="74" width="600" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Po8-WU-DEC" userLabel="Table View Cell cities">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Po8-WU-DEC" id="OTE-ee-8Pc">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbb-Bt-kbh">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbb-Bt-kbh">
                                                     <rect key="frame" x="8" y="11" width="573" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Py3-zd-w2l"/>

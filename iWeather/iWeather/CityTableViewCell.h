@@ -11,5 +11,7 @@
 @interface CityTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *labelCityName;
 @property (weak, nonatomic) IBOutlet UIImageView *imageviewCondition;
+@property (weak, nonatomic) IBOutlet UILabel *labelTemp;
+@property (weak, nonatomic) IBOutlet UILabel *labelCondition;
 
 @end

@@ -15,9 +15,9 @@
 
 @interface MasterViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *viewMain;
-
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constViewMainYpos;
 - (IBAction)buttonPressed:(id)sender;
 @property(weak,nonatomic) HomeViewController *vcHome;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewCities;
+-(void)refreshData;
 @end

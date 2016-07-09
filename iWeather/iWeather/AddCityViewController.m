@@ -71,6 +71,7 @@
             [hud hideAnimated:YES];
             if (status) {
                 //success
+                [self.navigationController dismissViewControllerAnimated:YES completion:nil];
             }else{
                 //error todo
             }

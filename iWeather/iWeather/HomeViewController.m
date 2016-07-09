@@ -16,10 +16,9 @@
 @interface HomeViewController ()
 {
     BOOL isMenuOpen;
-    MasterViewController *vcMaster;
     AddCityViewController *vcAddCity;
 }
-
+@property (nonatomic,strong) MasterViewController *vcMaster;
 @end
 
 @implementation HomeViewController
@@ -34,16 +33,18 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [CoredataManager fetchAllCitiesFromLocal:^(NSArray *arraySavedCities) {
-        
-    }];
+//    [CoredataManager fetchAllCitiesFromLocal:^(NSArray *arraySavedCities) {
+//        
+//    }];
+
+    [self.vcMaster refreshData];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"toMasterVC"]) {
         UINavigationController *nav = segue.destinationViewController;
-        vcMaster = (MasterViewController*) nav.topViewController;
-        vcMaster.vcHome = self;
+        self.vcMaster = (MasterViewController*) nav.topViewController;
+//        self.vcMaster.vcHome = self;
     }
     
     

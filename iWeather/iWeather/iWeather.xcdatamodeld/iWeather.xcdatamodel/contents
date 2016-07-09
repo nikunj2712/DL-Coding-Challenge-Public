@@ -10,8 +10,8 @@
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timezone" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="hasCondition" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CurrentConditions" inverseName="conditionBelongsToCity" inverseEntity="CurrentConditions" syncable="YES"/>
-        <relationship name="hasForecast" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Forecasts" inverseName="forecastBelongsToCity" inverseEntity="Forecasts" syncable="YES"/>
-        <relationship name="hasHourlyForecast" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HourlyForecasts" inverseName="hourlyforecastBelongsToCity" inverseEntity="HourlyForecasts" syncable="YES"/>
+        <relationship name="hasForecast" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Forecasts" inverseName="forecastBelongsToCity" inverseEntity="Forecasts" syncable="YES"/>
+        <relationship name="hasHourlyForecast" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HourlyForecasts" inverseName="hourlyforecastBelongsToCity" inverseEntity="HourlyForecasts" syncable="YES"/>
     </entity>
     <entity name="CurrentConditions" representedClassName="CurrentConditions" syncable="YES">
         <attribute name="condition" optional="YES" attributeType="String" syncable="YES"/>

@@ -10,7 +10,7 @@
 #import "DetailViewController.h"
 #import "CoredataManager.h"
 #import "CityTableViewCell.h"
-#import "Cities.h"
+#import "ListCityDetailsModel.h"
 
 @interface MasterViewController() <HomeViewControllerDelegate,UITableViewDelegate,UITableViewDataSource>
 {
@@ -29,7 +29,10 @@
     
     UINib *nibCell = [UINib nibWithNibName:@"CellCities" bundle:nil];
     [self.tableViewCities registerNib:nibCell forCellReuseIdentifier:@"cell"];
-    
+    [self refreshData];
+}
+
+-(void)refreshData{
     [CoredataManager fetchAllCitiesFromLocal:^(NSArray *arraySavedCities) {
         arrayCities = [NSArray arrayWithArray:arraySavedCities];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -65,8 +68,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     CityTableViewCell *cell = [self.tableViewCities dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    Cities *managedObjCity = arrayCities[indexPath.row];
-    cell.labelCityName.text = managedObjCity.cityname;
+    ListCityDetailsModel *modelCity = arrayCities[indexPath.row];
+    cell.labelCityName.text = modelCity.strCityName;
+    cell.labelTemp.text =  [NSString stringWithFormat:@"%@",modelCity.numTempF];
+    cell.labelCondition.text = modelCity.strWeather;
     return cell;
 }
 

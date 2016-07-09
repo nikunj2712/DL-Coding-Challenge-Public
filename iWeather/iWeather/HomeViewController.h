@@ -9,7 +9,10 @@
 
 //This viewcontroller holds container views that has SideMenuVC, MasterVC, this VC only deals with full app navigation.
 
+
+
 @protocol HomeViewControllerDelegate <NSObject>
+
 
 @optional
 -(void)menuPressed;
@@ -35,6 +38,8 @@
 @property(nonatomic) BOOL isBackEnabled;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constViewMainLeadingpos;
 @property (weak, nonatomic) IBOutlet UIView *viewMain;
+
+
 
 @end
 

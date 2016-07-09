@@ -11,6 +11,10 @@
 
 #import <Foundation/Foundation.h>
 #import "NewCitiesModel.h"
+#import "Cities+CoreDataProperties.h"
+#import "HourlyForecasts+CoreDataProperties.h"
+#import "Forecasts+CoreDataProperties.h"
+#import "CurrentConditions+CoreDataProperties.h"
 
 @interface WebserviceManager : NSObject
 
@@ -18,5 +22,8 @@
 
 +(void)fetchCitiesFromURL:(NSString *)urlString withResponse:(void(^)(NSArray *arrayCities))responseReceived;
 +(void)saveCityUsingCityFullName:(NewCitiesModel *)objCity withCompletion:(void(^)(BOOL status))status;
+
++(void)saveCityConditionsForQuery:(NSString *)stringQuery andCity:(Cities *)managedObjCity withCompletion:(void(^)(BOOL status))status;
+
 
 @end

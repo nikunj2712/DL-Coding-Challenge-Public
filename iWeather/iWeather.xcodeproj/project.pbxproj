@@ -35,6 +35,8 @@
 		EC095A5A1D3030BE00EC5894 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A591D3030BE00EC5894 /* MBProgressHUD.m */; };
 		EC095A5C1D30531700EC5894 /* CellCities.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC095A5B1D30531700EC5894 /* CellCities.xib */; };
 		EC095A5F1D30540700EC5894 /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A5E1D30540700EC5894 /* CityTableViewCell.m */; };
+		EC095A621D306F3000EC5894 /* ConditionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A611D306F3000EC5894 /* ConditionsModel.m */; };
+		EC095A651D307FBA00EC5894 /* ListCityDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A641D307FBA00EC5894 /* ListCityDetailsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,10 @@
 		EC095A5B1D30531700EC5894 /* CellCities.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellCities.xib; path = ../CellCities.xib; sourceTree = "<group>"; };
 		EC095A5D1D30540700EC5894 /* CityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableViewCell.h; sourceTree = "<group>"; };
 		EC095A5E1D30540700EC5894 /* CityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTableViewCell.m; sourceTree = "<group>"; };
+		EC095A601D306F3000EC5894 /* ConditionsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionsModel.h; sourceTree = "<group>"; };
+		EC095A611D306F3000EC5894 /* ConditionsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionsModel.m; sourceTree = "<group>"; };
+		EC095A631D307FBA00EC5894 /* ListCityDetailsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCityDetailsModel.h; sourceTree = "<group>"; };
+		EC095A641D307FBA00EC5894 /* ListCityDetailsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCityDetailsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +251,10 @@
 			children = (
 				EC095A541D3019D200EC5894 /* NewCitiesModel.h */,
 				EC095A551D3019D200EC5894 /* NewCitiesModel.m */,
+				EC095A601D306F3000EC5894 /* ConditionsModel.h */,
+				EC095A611D306F3000EC5894 /* ConditionsModel.m */,
+				EC095A631D307FBA00EC5894 /* ListCityDetailsModel.h */,
+				EC095A641D307FBA00EC5894 /* ListCityDetailsModel.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -407,6 +417,7 @@
 				EC095A511D2FE38100EC5894 /* Cities.m in Sources */,
 				EC095A561D3019D200EC5894 /* NewCitiesModel.m in Sources */,
 				EC095A501D2FE38100EC5894 /* Cities+CoreDataProperties.m in Sources */,
+				EC095A651D307FBA00EC5894 /* ListCityDetailsModel.m in Sources */,
 				EC009DE51D2F670F0008F7C9 /* WebserviceManager.m in Sources */,
 				EC009DBD1D2F411F0008F7C9 /* DetailViewController.m in Sources */,
 				EC009D9B1D2F21BE0008F7C9 /* HomeViewController.m in Sources */,
@@ -417,6 +428,7 @@
 				EC095A4A1D2FE38100EC5894 /* CurrentConditions+CoreDataProperties.m in Sources */,
 				EC095A5A1D3030BE00EC5894 /* MBProgressHUD.m in Sources */,
 				EC095A5F1D30540700EC5894 /* CityTableViewCell.m in Sources */,
+				EC095A621D306F3000EC5894 /* ConditionsModel.m in Sources */,
 				EC009DC31D2F43370008F7C9 /* AddCityViewController.m in Sources */,
 				EC009D981D2F21BE0008F7C9 /* AppDelegate.m in Sources */,
 				EC0959FA1D2FDEE200EC5894 /* MasterViewController.m in Sources */,

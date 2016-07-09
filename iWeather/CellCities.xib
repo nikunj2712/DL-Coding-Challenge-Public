@@ -12,7 +12,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFB-DA-I7f" userLabel="Label cityname">
-                    <rect key="frame" x="8" y="8" width="537" height="44"/>
+                    <rect key="frame" x="8" y="8" width="429" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="8Az-dt-yUw"/>
                     </constraints>
@@ -27,19 +27,51 @@
                         <constraint firstAttribute="width" constant="30" id="9FI-Li-qDc"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNy-Tw-TNw" userLabel="Label temp">
+                    <rect key="frame" x="499" y="11" width="53" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="JL3-uV-SSj"/>
+                        <constraint firstAttribute="width" priority="250" constant="53" id="bhD-ah-Oq4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbS-LM-byT" userLabel="Label condition">
+                    <rect key="frame" x="447" y="19" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="HT7-YH-sDi"/>
+                        <constraint firstAttribute="width" priority="250" constant="42" id="Vcy-J2-gzT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="sFB-DA-I7f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="3En-yB-do1"/>
+                <constraint firstItem="XbS-LM-byT" firstAttribute="leading" secondItem="sFB-DA-I7f" secondAttribute="trailing" constant="10" id="4Ms-Mx-PTf"/>
+                <constraint firstItem="oNy-Tw-TNw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8l3-qB-qlm"/>
                 <constraint firstItem="yLn-vo-y5M" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BIb-8m-eAD"/>
+                <constraint firstItem="XbS-LM-byT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="C9i-hY-b0c"/>
                 <constraint firstItem="sFB-DA-I7f" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="GAU-a3-0HR"/>
-                <constraint firstItem="yLn-vo-y5M" firstAttribute="leading" secondItem="sFB-DA-I7f" secondAttribute="trailing" constant="17" id="gWH-A6-pMn"/>
+                <constraint firstItem="yLn-vo-y5M" firstAttribute="leading" secondItem="sFB-DA-I7f" secondAttribute="trailing" constant="100" id="gWH-A6-pMn"/>
+                <constraint firstItem="oNy-Tw-TNw" firstAttribute="leading" secondItem="XbS-LM-byT" secondAttribute="trailing" constant="10" id="gs3-81-pYI"/>
                 <constraint firstAttribute="trailing" secondItem="yLn-vo-y5M" secondAttribute="trailing" constant="8" id="wBA-84-qUl"/>
+                <constraint firstItem="yLn-vo-y5M" firstAttribute="leading" secondItem="oNy-Tw-TNw" secondAttribute="trailing" constant="10" id="xc2-QT-HjM"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="gWH-A6-pMn"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="imageviewCondition" destination="yLn-vo-y5M" id="wM0-q5-qLq"/>
                 <outlet property="labelCityName" destination="sFB-DA-I7f" id="boh-DT-5CS"/>
+                <outlet property="labelCondition" destination="XbS-LM-byT" id="sMT-Dw-wUY"/>
+                <outlet property="labelTemp" destination="oNy-Tw-TNw" id="Fkb-QE-ol8"/>
             </connections>
             <point key="canvasLocation" x="491" y="421"/>
         </view>
