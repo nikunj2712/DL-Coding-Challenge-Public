@@ -122,6 +122,7 @@
         NSArray *arrayResConditions = [managedObjContext executeFetchRequest:fetchReqConditions error:nil];
         if (arrayResConditions.count>0) {
             CurrentConditions *managedObjConditions = [arrayResConditions firstObject];
+            modelCityListDetails.condition_icon_url = managedObjConditions.condition_icon_url;
             modelCityListDetails.numTempF = managedObjConditions.tempin_f;
             modelCityListDetails.strWeather = managedObjConditions.condition;
             [arrayCityList addObject:modelCityListDetails];

@@ -19,9 +19,12 @@
     AddCityViewController *vcAddCity;
 }
 @property (nonatomic,strong) MasterViewController *vcMaster;
+
 @end
 
 @implementation HomeViewController
+
+@synthesize isBackEnabled;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,14 +40,45 @@
 //        
 //    }];
 
+    [self addObserver:self forKeyPath:@"isBackEnabled" options:0 context:nil];
     [self.vcMaster refreshData];
+    
 }
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [self removeObserver:self forKeyPath:@"isBackEnabled"];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
+    if (object==self && [keyPath isEqualToString:@"isBackEnabled"]) {
+        if (self.isBackEnabled) {
+            [self.imageviewMenuBack setImage:[UIImage imageNamed:@"back"]];
+        }
+        else{
+            [self.imageviewMenuBack setImage:[UIImage imageNamed:@"menu"]];
+        }
+    }
+}
+
+//-(void)setIsBackEnabled:(BOOL)isBackEnabled{
+//    if (isBackEnabled) {
+//        [self.imageviewMenuBack setImage:[UIImage imageNamed:@"back"]];
+//    }
+//    else{
+//        [self.imageviewMenuBack setImage:[UIImage imageNamed:@"menu"]];
+//    }
+//    _isBackEnabled = isBackEnabled;
+//}
+
+
+
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"toMasterVC"]) {
         UINavigationController *nav = segue.destinationViewController;
         self.vcMaster = (MasterViewController*) nav.topViewController;
-//        self.vcMaster.vcHome = self;
+        self.vcMaster.vcHome = self;
     }
     
     
@@ -99,6 +133,8 @@
     }
 
 }
+
+
 - (IBAction)buttonAddCityPressed:(id)sender {
     [self performSegueWithIdentifier:@"toAddCityVC" sender:self];
 }

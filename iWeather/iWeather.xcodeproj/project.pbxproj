@@ -37,6 +37,13 @@
 		EC095A5F1D30540700EC5894 /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A5E1D30540700EC5894 /* CityTableViewCell.m */; };
 		EC095A621D306F3000EC5894 /* ConditionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A611D306F3000EC5894 /* ConditionsModel.m */; };
 		EC095A651D307FBA00EC5894 /* ListCityDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC095A641D307FBA00EC5894 /* ListCityDetailsModel.m */; };
+		ECF25E6F1D315F65001027DD /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E6C1D315F65001027DD /* iTunesArtwork@1x.png */; };
+		ECF25E701D315F65001027DD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E6D1D315F65001027DD /* iTunesArtwork@2x.png */; };
+		ECF25E711D315F65001027DD /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E6E1D315F65001027DD /* iTunesArtwork@3x.png */; };
+		ECF25E751D315FD5001027DD /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E731D315FD5001027DD /* back@2x.png */; };
+		ECF25E761D315FD5001027DD /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E741D315FD5001027DD /* menu@2x.png */; };
+		ECF25E781D317903001027DD /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E771D317903001027DD /* add@2x.png */; };
+		ECF25E7B1D317E8C001027DD /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF25E7A1D317E8C001027DD /* MenuTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +116,14 @@
 		EC095A611D306F3000EC5894 /* ConditionsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionsModel.m; sourceTree = "<group>"; };
 		EC095A631D307FBA00EC5894 /* ListCityDetailsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCityDetailsModel.h; sourceTree = "<group>"; };
 		EC095A641D307FBA00EC5894 /* ListCityDetailsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCityDetailsModel.m; sourceTree = "<group>"; };
+		ECF25E6C1D315F65001027DD /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@1x.png"; path = "DL-Coding-Challenge-Public/iWeather/iWeather/Assets.xcassets/iTunesArtwork@1x.png"; sourceTree = "<group>"; };
+		ECF25E6D1D315F65001027DD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "DL-Coding-Challenge-Public/iWeather/iWeather/Assets.xcassets/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		ECF25E6E1D315F65001027DD /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@3x.png"; path = "DL-Coding-Challenge-Public/iWeather/iWeather/Assets.xcassets/iTunesArtwork@3x.png"; sourceTree = "<group>"; };
+		ECF25E731D315FD5001027DD /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		ECF25E741D315FD5001027DD /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		ECF25E771D317903001027DD /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
+		ECF25E791D317E8C001027DD /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		ECF25E7A1D317E8C001027DD /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +196,8 @@
 				EC095A5D1D30540700EC5894 /* CityTableViewCell.h */,
 				EC095A5E1D30540700EC5894 /* CityTableViewCell.m */,
 				EC095A5B1D30531700EC5894 /* CellCities.xib */,
+				ECF25E791D317E8C001027DD /* MenuTableViewController.h */,
+				ECF25E7A1D317E8C001027DD /* MenuTableViewController.m */,
 				EC009DC41D2F4CCC0008F7C9 /* HourlyViewController.h */,
 				EC009DC51D2F4CCC0008F7C9 /* HourlyViewController.m */,
 				EC009DBB1D2F411F0008F7C9 /* DetailViewController.h */,
@@ -196,6 +213,10 @@
 				EC095A531D2FFD4900EC5894 /* PrefixHeader.pch */,
 				EC095A581D3030BE00EC5894 /* MBProgressHUD.h */,
 				EC095A591D3030BE00EC5894 /* MBProgressHUD.m */,
+				ECF25E721D315FD5001027DD /* images */,
+				ECF25E6C1D315F65001027DD /* iTunesArtwork@1x.png */,
+				ECF25E6D1D315F65001027DD /* iTunesArtwork@2x.png */,
+				ECF25E6E1D315F65001027DD /* iTunesArtwork@3x.png */,
 				EC009D9C1D2F21BE0008F7C9 /* Main.storyboard */,
 				EC009DA21D2F21BE0008F7C9 /* Assets.xcassets */,
 				EC009DA41D2F21BE0008F7C9 /* LaunchScreen.storyboard */,
@@ -257,6 +278,16 @@
 				EC095A641D307FBA00EC5894 /* ListCityDetailsModel.m */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		ECF25E721D315FD5001027DD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				ECF25E771D317903001027DD /* add@2x.png */,
+				ECF25E731D315FD5001027DD /* back@2x.png */,
+				ECF25E741D315FD5001027DD /* menu@2x.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +375,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC095A5C1D30531700EC5894 /* CellCities.xib in Resources */,
+				ECF25E751D315FD5001027DD /* back@2x.png in Resources */,
+				ECF25E711D315F65001027DD /* iTunesArtwork@3x.png in Resources */,
+				ECF25E701D315F65001027DD /* iTunesArtwork@2x.png in Resources */,
+				ECF25E761D315FD5001027DD /* menu@2x.png in Resources */,
+				ECF25E6F1D315F65001027DD /* iTunesArtwork@1x.png in Resources */,
+				ECF25E781D317903001027DD /* add@2x.png in Resources */,
 				EC009DA61D2F21BE0008F7C9 /* LaunchScreen.storyboard in Resources */,
 				EC009DA31D2F21BE0008F7C9 /* Assets.xcassets in Resources */,
 				EC009D9E1D2F21BE0008F7C9 /* Main.storyboard in Resources */,
@@ -426,6 +463,7 @@
 				EC095A4B1D2FE38100EC5894 /* CurrentConditions.m in Sources */,
 				EC095A4F1D2FE38100EC5894 /* Forecasts.m in Sources */,
 				EC095A4A1D2FE38100EC5894 /* CurrentConditions+CoreDataProperties.m in Sources */,
+				ECF25E7B1D317E8C001027DD /* MenuTableViewController.m in Sources */,
 				EC095A5A1D3030BE00EC5894 /* MBProgressHUD.m in Sources */,
 				EC095A5F1D30540700EC5894 /* CityTableViewCell.m in Sources */,
 				EC095A621D306F3000EC5894 /* ConditionsModel.m in Sources */,

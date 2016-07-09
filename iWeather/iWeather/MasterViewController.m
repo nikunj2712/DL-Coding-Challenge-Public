@@ -72,10 +72,31 @@
     cell.labelCityName.text = modelCity.strCityName;
     cell.labelTemp.text =  [NSString stringWithFormat:@"%@",modelCity.numTempF];
     cell.labelCondition.text = modelCity.strWeather;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.tag = indexPath.row;
+    if (!cell.imageviewCondition.image) {
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+        dispatch_async(queue, ^(void) {
+            
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:modelCity.condition_icon_url]];
+                                 
+                                 UIImage* image = [[UIImage alloc] initWithData:imageData];
+                                 if (image) {
+                                     dispatch_async(dispatch_get_main_queue(), ^{
+                                         if (cell.tag == indexPath.row) {
+                                             cell.imageviewCondition.image = image;
+                                             [cell setNeedsLayout];
+                                         }
+                                     });
+                                 }
+                                 });
+    }
+    
     return cell;
 }
 
-- (IBAction)buttonPressed:(id)sender {
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.vcHome.isBackEnabled = YES;
     [self.viewMain setNeedsUpdateConstraints];
     [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:1 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -89,6 +110,10 @@
             [self performSegueWithIdentifier:@"toDetailVC" sender:self];
         });
     }];
+
+}
+
+- (IBAction)buttonPressed:(id)sender {
     
     
 }

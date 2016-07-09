@@ -38,8 +38,7 @@
 @property(nonatomic) BOOL isBackEnabled;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constViewMainLeadingpos;
 @property (weak, nonatomic) IBOutlet UIView *viewMain;
-
-
+@property (weak, nonatomic) IBOutlet UIImageView *imageviewMenuBack;
 
 @end
 

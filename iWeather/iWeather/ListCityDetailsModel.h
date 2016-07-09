@@ -14,6 +14,7 @@
 @property(nonatomic,strong) NSString *strWeather;
 @property(nonatomic,strong) NSNumber *numTempF;
 @property(nonatomic,strong) NSString *strTimeZone;
+@property(nonatomic,strong) NSString *condition_icon_url;
 @property(nonatomic) BOOL *isHome;
 
 @end
