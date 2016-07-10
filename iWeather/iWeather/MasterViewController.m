@@ -77,8 +77,15 @@
         }
         NSString *stringQuery = [NSString stringWithFormat:@"%@/%@",strShortCode,objCity.strCityName];
         
-        [WebserviceManager saveCityConditionsForQuery:stringQuery andCity:objCity.managedObjCity withCompletion:^(BOOL status) {
-            dispatch_semaphore_signal(sem);
+        [WebserviceManager saveCityConditionsForQuery:stringQuery andCity:objCity.managedObjCity withCompletion:^(BOOL status,NSString *errorRes) {
+            if (errorRes) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                        UIAlertView *alertViewLocalNotification  = [[UIAlertView alloc]initWithTitle:@"Error!" message:errorRes delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                        [alertViewLocalNotification show];
+                });
+            }else{
+                dispatch_semaphore_signal(sem);
+            }
         }];
         dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
     }

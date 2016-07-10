@@ -35,13 +35,24 @@
     NSString* strWebServiceURL =[NSString stringWithFormat:@"%@&input=%@",KSERVER_GOOGLE_URL,strTypedText];
     
     if (strTypedText.length>1) {
-        [WebserviceManager fetchCitiesFromURL:strWebServiceURL withResponse:^(NSArray *arrayCities) {
-            arrayNewCities = [NSArray arrayWithArray:arrayCities];
+        [WebserviceManager fetchCitiesFromURL:strWebServiceURL withResponse:^(NSArray *arrayCities,NSString *errorRes) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableViewCities reloadData];
+                
+                if (!errorRes) {
+                    arrayNewCities = [NSArray arrayWithArray:arrayCities];
+                    [self.tableViewCities reloadData];
+                    
+                }else{
+                    UIAlertView *alertViewLocalNotification  = [[UIAlertView alloc]initWithTitle:@"Error!" message:errorRes delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    [alertViewLocalNotification show];
+                }
             });
         }];
     }
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self.textfieldCity becomeFirstResponder];
 }
 
 #pragma mark table view
@@ -65,7 +76,7 @@
     
     NewCitiesModel *objCity = arrayNewCities[indexPath.row];
     
-    [WebserviceManager saveCityUsingCityFullName:objCity withCompletion:^(BOOL status) {
+    [WebserviceManager saveCityUsingCityFullName:objCity withCompletion:^(BOOL status,NSString *errorRes) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [hud hideAnimated:YES];
@@ -73,7 +84,8 @@
                 //success
                 [self.navigationController dismissViewControllerAnimated:YES completion:nil];
             }else{
-                //error todo
+                UIAlertView *alertViewLocalNotification  = [[UIAlertView alloc]initWithTitle:@"Error!" message:errorRes delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alertViewLocalNotification show];
             }
         });
     }];

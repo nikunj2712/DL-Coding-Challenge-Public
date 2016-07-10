@@ -20,10 +20,10 @@
 
 +(WebserviceManager *)sharedWebservices;
 
-+(void)fetchCitiesFromURL:(NSString *)urlString withResponse:(void(^)(NSArray *arrayCities))responseReceived;
-+(void)saveCityUsingCityFullName:(NewCitiesModel *)objCity withCompletion:(void(^)(BOOL status))status;
++(void)fetchCitiesFromURL:(NSString *)urlString withResponse:(void(^)(NSArray *arrayCities,NSString *errorRes))responseReceived;
++(void)saveCityUsingCityFullName:(NewCitiesModel *)objCity withCompletion:(void(^)(BOOL status,NSString *errorRes))status;
 
-+(void)saveCityConditionsForQuery:(NSString *)stringQuery andCity:(Cities *)managedObjCity withCompletion:(void(^)(BOOL status))status;
++(void)saveCityConditionsForQuery:(NSString *)stringQuery andCity:(Cities *)managedObjCity withCompletion:(void(^)(BOOL status,NSString *errorRes))status;
 
 
 @end

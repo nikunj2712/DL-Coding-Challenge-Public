@@ -46,16 +46,26 @@
     [self addObserver:self forKeyPath:@"isBackEnabled" options:0 context:nil];
     [self.vcMaster refreshData];
     
-}
+}   
 
 -(void)viewDidDisappear:(BOOL)animated{
     [self removeObserver:self forKeyPath:@"isBackEnabled"];
 }
 
-#pragma Delegate Menu
+#pragma mark Delegate Menu
 
 -(void)tempUnitChanged{
     [self.vcMaster refreshData];
+}
+
+-(void)openSourcePressed{
+    [self buttonMenuPressed:self];
+    [self performSegueWithIdentifier:@"toWebVC" sender:self];
+}
+
+-(void)addNewCityPressed{
+    [self buttonMenuPressed:self];
+    [self buttonAddCityPressed:self];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{

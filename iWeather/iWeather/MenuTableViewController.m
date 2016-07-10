@@ -17,11 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.cellCurrentLoc setSelectionStyle:UITableViewCellSelectionStyleNone];
     [self.cellAddCity setSelectionStyle:UITableViewCellSelectionStyleNone];
     [self.cellTempUnit setSelectionStyle:UITableViewCellSelectionStyleNone];
@@ -57,8 +52,14 @@
     if (theCellClicked == self.cellCurrentLoc) {
     }
     if (theCellClicked == self.cellAddCity) {
+        if ([self.delegateMenu respondsToSelector:@selector(addNewCityPressed)]) {
+            [self.delegateMenu addNewCityPressed];
+        }
     }
     if (theCellClicked == self.cellOpenSource) {
+        if ([self.delegateMenu respondsToSelector:@selector(openSourcePressed)]) {
+            [self.delegateMenu openSourcePressed];
+        }
     }
 }
 

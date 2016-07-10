@@ -179,6 +179,7 @@
 }
 
 +(void)insertCurrentConditionsForCity:(Cities *)managedObjCity andData:(ConditionsModel *)modelConditions withCompletion:(void(^)(BOOL isSaved))completion{
+    
     NSManagedObjectContext *managedObjContext = [self managedObjectContext];
 
 //    NSString *condition;
