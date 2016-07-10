@@ -11,12 +11,15 @@
 #import "MasterViewController.h"
 #import "AddCityViewController.h"
 #import "CoredataManager.h"
+#import "MenuTableViewController.h"
 
 
-@interface HomeViewController ()
+
+@interface HomeViewController () <MenuTableViewControllerDelegate>
 {
     BOOL isMenuOpen;
     AddCityViewController *vcAddCity;
+    MenuTableViewController *vcMenu;
 }
 @property (nonatomic,strong) MasterViewController *vcMaster;
 
@@ -47,6 +50,12 @@
 
 -(void)viewDidDisappear:(BOOL)animated{
     [self removeObserver:self forKeyPath:@"isBackEnabled"];
+}
+
+#pragma Delegate Menu
+
+-(void)tempUnitChanged{
+    [self.vcMaster refreshData];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
@@ -88,6 +97,11 @@
         vcAddCity.vcHome = self;
     }
     
+    if ([segue.identifier isEqualToString:@"toSideMenu"]) {
+        vcMenu = segue.destinationViewController;
+        vcMenu.delegateMenu = self;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,6 +112,7 @@
 - (IBAction)buttonMenuPressed:(id)sender {
     if (self.isBackEnabled) {
         //
+        [self.buttonhiddenMenu setHidden:YES];
         if ([self.delegateHomeVC respondsToSelector:@selector(menuPressed)]) {
             [self.delegateHomeVC menuPressed];
         }
@@ -105,6 +120,7 @@
     else{
         
         if (isMenuOpen) {
+            [self.buttonhiddenMenu setHidden:YES];
             [self.viewMain setNeedsUpdateConstraints];
             [self.containerMain setNeedsUpdateConstraints];
             isMenuOpen = NO;
@@ -118,6 +134,7 @@
         }
         else{
             //show menu
+            [self.buttonhiddenMenu setHidden:NO];
             [self.viewMain setNeedsUpdateConstraints];
             [self.containerMain setNeedsUpdateConstraints];
             isMenuOpen = YES;

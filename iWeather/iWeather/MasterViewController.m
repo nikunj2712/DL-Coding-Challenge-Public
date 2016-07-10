@@ -12,11 +12,14 @@
 #import "CityTableViewCell.h"
 #import "ListCityDetailsModel.h"
 
+
 @interface MasterViewController() <HomeViewControllerDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     DetailViewController *vcDetail;
-    __block NSArray *arrayCities;
+    __block NSMutableArray *arrayCities;
     ListCityDetailsModel *selectedCity;
+
+    BOOL isUnitFarenheit;
     
 }
 @end
@@ -35,8 +38,9 @@
 }
 
 -(void)refreshData{
+    isUnitFarenheit = [[[NSUserDefaults standardUserDefaults] objectForKey:@"tempunit"] boolValue];
     [CoredataManager fetchAllCitiesFromLocal:^(NSArray *arraySavedCities) {
-        arrayCities = [NSArray arrayWithArray:arraySavedCities];
+        arrayCities = [[NSArray arrayWithArray:arraySavedCities] mutableCopy];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableViewCities reloadData];
         });
@@ -49,6 +53,10 @@
         vcDetail = segue.destinationViewController;
         vcDetail.selectedCity = selectedCity;
     }
+    
+
+    
+    
 }
 
 #pragma mark HomeVC Delegate
@@ -73,7 +81,18 @@
     CityTableViewCell *cell = [self.tableViewCities dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     ListCityDetailsModel *modelCity = arrayCities[indexPath.row];
     cell.labelCityName.text = modelCity.strCityName;
-    cell.labelTemp.text =  [NSString stringWithFormat:@"%@",modelCity.numTempF];
+    
+    NSString *strTemp;
+    
+    if (isUnitFarenheit) {
+        //f
+        strTemp = [NSString stringWithFormat:@"%@",modelCity.numTempF];
+    }else{
+        //c
+        strTemp =  [NSString stringWithFormat:@"%.0f",([modelCity.numTempF floatValue] - 32) / 1.8] ;
+    }
+    
+    cell.labelTemp.text =  strTemp;
     cell.labelCondition.text = modelCity.strWeather;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.tag = indexPath.row;
@@ -118,6 +137,26 @@
         });
     }];
 
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        ListCityDetailsModel *objCity = arrayCities[indexPath.row];
+        [CoredataManager deleteCityWithPlaceID:objCity.strPlaceID withCompletion:^(BOOL isSucess) {
+            if (isSucess) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [arrayCities removeObjectAtIndex:indexPath.row];
+                    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//                    [self refreshData];
+                });
+            }
+        }];
+    }
 }
 
 - (IBAction)buttonPressed:(id)sender {

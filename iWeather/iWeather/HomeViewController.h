@@ -39,6 +39,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constViewMainLeadingpos;
 @property (weak, nonatomic) IBOutlet UIView *viewMain;
 @property (weak, nonatomic) IBOutlet UIImageView *imageviewMenuBack;
+@property (weak, nonatomic) IBOutlet UIButton *buttonhiddenMenu;
 
 @end
 

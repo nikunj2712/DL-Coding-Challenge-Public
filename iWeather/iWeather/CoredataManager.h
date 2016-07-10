@@ -26,4 +26,6 @@
 
 +(void)insertCurrentConditionsForCity:(Cities *)managedObjCity andData:(ConditionsModel *)modelConditions withCompletion:(void(^)(BOOL isSaved))completion;
 
++(void)deleteCityWithPlaceID:(NSString *)placeID withCompletion:(void(^)(BOOL isSucess))success;
+
 @end

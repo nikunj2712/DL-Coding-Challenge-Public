@@ -17,7 +17,6 @@
 		EC009DA61D2F21BE0008F7C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC009DA41D2F21BE0008F7C9 /* LaunchScreen.storyboard */; };
 		EC009DB11D2F21BF0008F7C9 /* iWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DB01D2F21BF0008F7C9 /* iWeatherTests.m */; };
 		EC009DBD1D2F411F0008F7C9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DBC1D2F411F0008F7C9 /* DetailViewController.m */; };
-		EC009DC01D2F415F0008F7C9 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DBF1D2F415E0008F7C9 /* SideMenuViewController.m */; };
 		EC009DC31D2F43370008F7C9 /* AddCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DC21D2F43370008F7C9 /* AddCityViewController.m */; };
 		EC009DC61D2F4CCC0008F7C9 /* HourlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DC51D2F4CCC0008F7C9 /* HourlyViewController.m */; };
 		EC009DE21D2F66F30008F7C9 /* CoredataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC009DE11D2F66F20008F7C9 /* CoredataManager.m */; };
@@ -81,8 +80,6 @@
 		EC009DB21D2F21BF0008F7C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC009DBB1D2F411F0008F7C9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		EC009DBC1D2F411F0008F7C9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		EC009DBE1D2F415E0008F7C9 /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
-		EC009DBF1D2F415E0008F7C9 /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
 		EC009DC11D2F43370008F7C9 /* AddCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCityViewController.h; sourceTree = "<group>"; };
 		EC009DC21D2F43370008F7C9 /* AddCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCityViewController.m; sourceTree = "<group>"; };
 		EC009DC41D2F4CCC0008F7C9 /* HourlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourlyViewController.h; sourceTree = "<group>"; };
@@ -214,8 +211,6 @@
 				EC009DBC1D2F411F0008F7C9 /* DetailViewController.m */,
 				EC0959F81D2FDEE200EC5894 /* MasterViewController.h */,
 				EC0959F91D2FDEE200EC5894 /* MasterViewController.m */,
-				EC009DBE1D2F415E0008F7C9 /* SideMenuViewController.h */,
-				EC009DBF1D2F415E0008F7C9 /* SideMenuViewController.m */,
 				EC009DE01D2F66F20008F7C9 /* CoredataManager.h */,
 				EC009DE11D2F66F20008F7C9 /* CoredataManager.m */,
 				EC009DE31D2F670F0008F7C9 /* WebserviceManager.h */,
@@ -469,7 +464,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC009DC01D2F415F0008F7C9 /* SideMenuViewController.m in Sources */,
 				EC095A4C1D2FE38100EC5894 /* HourlyForecasts+CoreDataProperties.m in Sources */,
 				EC095A511D2FE38100EC5894 /* Cities.m in Sources */,
 				EC095A561D3019D200EC5894 /* NewCitiesModel.m in Sources */,

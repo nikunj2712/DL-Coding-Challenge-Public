@@ -114,6 +114,7 @@
     for (Cities *managedObjCities in arrayRes) {
         ListCityDetailsModel *modelCityListDetails = [ListCityDetailsModel new];
         modelCityListDetails.strCityName = managedObjCities.cityname;
+        modelCityListDetails.strPlaceID = managedObjCities.placeid;
         modelCityListDetails.strTimeZone = managedObjCities.timezone;
         NSFetchRequest *fetchReqConditions = [[NSFetchRequest alloc] initWithEntityName:KEntity_Conditions];
         [fetchReqConditions setPredicate:[NSPredicate predicateWithFormat:@"conditionBelongsToCity == %@",managedObjCities.objectID]];
@@ -134,6 +135,28 @@
 //    for (Cities *managedObjCity in arrayRes) {
 //        NSLog(@"City: %@",managedObjCity.cityname);
 //    }
+}
+
++(void)deleteCityWithPlaceID:(NSString *)placeID withCompletion:(void(^)(BOOL isSucess))success{
+    NSManagedObjectContext *managedObjContext = [self managedObjectContext];
+    
+    NSFetchRequest *fetchReqCity = [[NSFetchRequest alloc] initWithEntityName:KEntity_Cities];
+    [fetchReqCity setPredicate:[NSPredicate predicateWithFormat:@"placeid = %@",placeID]];
+    [fetchReqCity setReturnsObjectsAsFaults:NO];
+    
+    NSError *error;
+    
+    NSArray *arrayRes = [managedObjContext executeFetchRequest:fetchReqCity error:&error];
+    for (Cities *managedObjCity in arrayRes) {
+        [managedObjContext deleteObject:managedObjCity];
+    }
+    NSError *error1;
+    if (![managedObjContext save:&error1]) {
+        success(0);
+    }
+    else{
+        success(1);
+    }
 }
 
 +(void)insertCurrentConditionsForCity:(Cities *)managedObjCity andData:(ConditionsModel *)modelConditions withCompletion:(void(^)(BOOL isSaved))completion{
