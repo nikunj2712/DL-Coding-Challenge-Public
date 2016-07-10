@@ -11,6 +11,7 @@
 #import "CoredataManager.h"
 #import "CityTableViewCell.h"
 #import "ListCityDetailsModel.h"
+#import "WebserviceManager.h"
 
 
 @interface MasterViewController() <HomeViewControllerDelegate,UITableViewDelegate,UITableViewDataSource>
@@ -22,6 +23,7 @@
     BOOL isUnitFarenheit;
     
 }
+@property (nonatomic,strong) UIRefreshControl *refreshControl;
 @end
 
 @implementation MasterViewController
@@ -34,7 +36,21 @@
     
     UINib *nibCell = [UINib nibWithNibName:@"CellCities" bundle:nil];
     [self.tableViewCities registerNib:nibCell forCellReuseIdentifier:@"cell"];
-    [self refreshData];
+    [self fetchLatestData];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor whiteColor];
+    self.refreshControl.tintColor = [UIColor darkGrayColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(fetchLatestData)
+                  forControlEvents:UIControlEventValueChanged];
+    [self.tableViewCities addSubview:self.refreshControl];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(fetchLatestData)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
+    
 }
 
 -(void)refreshData{
@@ -47,17 +63,36 @@
     }];
 }
 
+-(void)fetchLatestData{
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);
+    
+    for (ListCityDetailsModel *objCity in arrayCities) {
+        
+        NSString *strShortCode;
+        //Fetch Current conditions
+        if (objCity.strState.length==0) {
+            strShortCode = objCity.strCountry;
+        }else{
+            strShortCode = objCity.strState;
+        }
+        NSString *stringQuery = [NSString stringWithFormat:@"%@/%@",strShortCode,objCity.strCityName];
+        
+        [WebserviceManager saveCityConditionsForQuery:stringQuery andCity:objCity.managedObjCity withCompletion:^(BOOL status) {
+            dispatch_semaphore_signal(sem);
+        }];
+        dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+    }
+    [self refreshData];
+    [self.refreshControl endRefreshing];
+}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"toDetailVC"]) {
         vcDetail = segue.destinationViewController;
         vcDetail.selectedCity = selectedCity;
     }
-    
-
-    
-    
 }
+
 
 #pragma mark HomeVC Delegate
 -(void)menuPressed{
@@ -162,5 +197,9 @@
 - (IBAction)buttonPressed:(id)sender {
     
     
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end

@@ -301,6 +301,7 @@
                 modelCondition.numpressure_in = numpressure_in;
                 modelCondition.numfeelslike_f = numfeelslike_f;
                 modelCondition.numvisibility_mi = numvisibility_mi;
+                
                 modelCondition.managedObjCity = managedObjCity;
                 
                 [CoredataManager insertCurrentConditionsForCity:managedObjCity andData:modelCondition withCompletion:^(BOOL isSaved) {

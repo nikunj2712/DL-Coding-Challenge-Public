@@ -28,4 +28,6 @@
 
 +(void)deleteCityWithPlaceID:(NSString *)placeID withCompletion:(void(^)(BOOL isSucess))success;
 
++(Cities *)fetchCityForPlaceID:(NSString *)strPlaceID;
+
 @end
