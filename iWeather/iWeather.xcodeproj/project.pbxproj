@@ -45,6 +45,10 @@
 		ECF25E781D317903001027DD /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E771D317903001027DD /* add@2x.png */; };
 		ECF25E7B1D317E8C001027DD /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF25E7A1D317E8C001027DD /* MenuTableViewController.m */; };
 		ECF25E7D1D319472001027DD /* clear.gif in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E7C1D319472001027DD /* clear.gif */; };
+		ECF25E821D31C2A5001027DD /* cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E7E1D31C2A5001027DD /* cloud@2x.png */; };
+		ECF25E831D31C2A5001027DD /* wind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E7F1D31C2A5001027DD /* wind@2x.png */; };
+		ECF25E841D31C2A5001027DD /* fan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E801D31C2A5001027DD /* fan@2x.png */; };
+		ECF25E851D31C2A5001027DD /* windtower@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF25E811D31C2A5001027DD /* windtower@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +130,10 @@
 		ECF25E791D317E8C001027DD /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		ECF25E7A1D317E8C001027DD /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		ECF25E7C1D319472001027DD /* clear.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = clear.gif; sourceTree = "<group>"; };
+		ECF25E7E1D31C2A5001027DD /* cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud@2x.png"; sourceTree = "<group>"; };
+		ECF25E7F1D31C2A5001027DD /* wind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wind@2x.png"; sourceTree = "<group>"; };
+		ECF25E801D31C2A5001027DD /* fan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fan@2x.png"; sourceTree = "<group>"; };
+		ECF25E811D31C2A5001027DD /* windtower@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "windtower@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +293,10 @@
 		ECF25E721D315FD5001027DD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				ECF25E7E1D31C2A5001027DD /* cloud@2x.png */,
+				ECF25E7F1D31C2A5001027DD /* wind@2x.png */,
+				ECF25E801D31C2A5001027DD /* fan@2x.png */,
+				ECF25E811D31C2A5001027DD /* windtower@2x.png */,
 				ECF25E7C1D319472001027DD /* clear.gif */,
 				ECF25E771D317903001027DD /* add@2x.png */,
 				ECF25E731D315FD5001027DD /* back@2x.png */,
@@ -377,14 +389,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF25E841D31C2A5001027DD /* fan@2x.png in Resources */,
 				EC095A5C1D30531700EC5894 /* CellCities.xib in Resources */,
 				ECF25E751D315FD5001027DD /* back@2x.png in Resources */,
+				ECF25E851D31C2A5001027DD /* windtower@2x.png in Resources */,
 				ECF25E711D315F65001027DD /* iTunesArtwork@3x.png in Resources */,
 				ECF25E701D315F65001027DD /* iTunesArtwork@2x.png in Resources */,
 				ECF25E761D315FD5001027DD /* menu@2x.png in Resources */,
 				ECF25E6F1D315F65001027DD /* iTunesArtwork@1x.png in Resources */,
 				ECF25E781D317903001027DD /* add@2x.png in Resources */,
 				EC009DA61D2F21BE0008F7C9 /* LaunchScreen.storyboard in Resources */,
+				ECF25E831D31C2A5001027DD /* wind@2x.png in Resources */,
+				ECF25E821D31C2A5001027DD /* cloud@2x.png in Resources */,
 				EC009DA31D2F21BE0008F7C9 /* Assets.xcassets in Resources */,
 				EC009D9E1D2F21BE0008F7C9 /* Main.storyboard in Resources */,
 				ECF25E7D1D319472001027DD /* clear.gif in Resources */,
