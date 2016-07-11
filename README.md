@@ -1,19 +1,49 @@
 # DL-Coding-Challenge
-Welcome to the Detroit Labs coding challenge. 
+
+Result Project: iWeather an iOS App written in Objective-C (POC)
+
+Screenshots:
+![Screen1](https://raw.githubusercontent.com/nikunj2712/Website/gh-pages/images/s1.PNG)
+
+![Screen2](https://raw.githubusercontent.com/nikunj2712/Website/gh-pages/images/s2.PNG)
+
+![Screen3](https://raw.githubusercontent.com/nikunj2712/Website/gh-pages/images/s3.PNG)
+
+ - Search city using Google's places API.
+ - Current weather conditions of cities saved, fetched from API.
+ - Weekly, Daily, Hourly Weather Info (Dummy data)
+ - Pull to Refresh
+ - User can display multiple locations
+ - Settings Menu
+ - Error handling
+ - Data persistance with Core Data
+ - UITableview cell with swipe to delete feature
+ - Utilized multi-threaded programming for asynchronous tasks
+ - Simple, yet elegant UI built with storyboards and AutoLayouts.
+
+Happy code reviewing!
+
+Thank you,
+Nikunj.
+
+----------
+
+
+Welcome to the Detroit Labs coding challenge.
 
 Please fork this repo and create a branch that includes your name in the branch name (We like to read commits!). Choose from Android, iOS or web to complete this challenge. Comment on what libraries or frameworks you choose to use so we know exactly what code is yours and what is coming from a third-party.
 
-Plan, document, and build your proof of concept then [submit](#submit) it when you are done. 
+Plan, document, and build your proof of concept then [submit](#submit) it when you are done.
 
 Proof of Concept scenario description
 ---
-Your Project Manager has just come to you with a potential Client who has requested a WeatherApp _Proof of Concept_! The Client has given us a budget and a laundry list of features. It is your job to build from the feature list to your skill level and defend your implementaton and design decisions. We are trying to win more business from this Very Important Client, and this Proof of Concept needs to impress them in order to move forward. The good news is you have a lot of flexibility with the UI and how you want to display the Weather information. 
+Your Project Manager has just come to you with a potential Client who has requested a WeatherApp _Proof of Concept_! The Client has given us a budget and a laundry list of features. It is your job to build from the feature list to your skill level and defend your implementaton and design decisions. We are trying to win more business from this Very Important Client, and this Proof of Concept needs to impress them in order to move forward. The good news is you have a lot of flexibility with the UI and how you want to display the Weather information.
 
 The Challenge is to implement features and a UI for a Proof of Concept that looks good and gives insight into what the full app could be in the future.
 
 How many and what features you implement is up to you, but be ready to discuss your strategy and implementation.
 
-* In the [Non-Functional Requirements of Interest](#platformSpecs) section you can find more details about what we are looking for. 
+* In the [Non-Functional Requirements of Interest](#platformSpecs) section you can find more details about what we are looking for.
 * Please use the [Weather Underground API][1] (There is a lot in the API, show us what you got!).
 
 Ideas for Features
@@ -22,16 +52,16 @@ Ideas for Features
 * Icons & Menu Icons
 * Monthly, Weekly, Daily, Hourly Weather Info
 * Map (weather/radar)
-* Methods for Multiple UI Themes 
+* Methods for Multiple UI Themes
 * Pull to Refresh
-* Seasonal Conditions (Golf, Sailing, Skiing) 
+* Seasonal Conditions (Golf, Sailing, Skiing)
 * Wearable App
-* User can display multiple locations 
+* User can display multiple locations
 * User Auth
 * Graph (Precipitation, Humidity, Temp, etc.)
 * GPS Location
-  
-*notes* 
+
+*notes*
 * Feel free to add any of your own features, just be prepared to defend them!
 
 <a id="platformSpecs"></a>
@@ -86,7 +116,7 @@ Our Evaluation Criteria:
 <a id="submit"></a>
 How to Submit
 ---
-* Please fork this repository and create a branch for your project. 
+* Please fork this repository and create a branch for your project.
 * When you are finished, send a pull request for review.
 * Please make sure any services you may use are deployed so we can test your app.
 * Once we have reviewed your submission we will contact you for the next steps.
